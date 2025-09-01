@@ -42,11 +42,38 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
             border-left: 5px solid;
+            text-align: center;
         }
         
         .character-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .character-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px auto;
+            display: block;
+            border: 3px solid;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .image-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            border: 3px dashed #ccc;
+            color: #666;
+            font-size: 14px;
+            text-align: center;
         }
         
         .character-name {
@@ -58,6 +85,7 @@
         
         .character-info {
             margin-bottom: 8px;
+            text-align: left;
         }
         
         .character-info strong {
@@ -71,6 +99,7 @@
             border-radius: 10px;
             font-style: italic;
             line-height: 1.6;
+            text-align: left;
         }
         
         .footer {
@@ -79,6 +108,14 @@
             padding: 20px;
             border-radius: 15px;
             margin-top: 30px;
+        }
+        
+        .instructions {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #4CAF50;
         }
     </style>
 </head>
@@ -89,8 +126,30 @@
             <p>Discover the magical world of Sanrio characters and their stories!</p>
         </div>
         
+        <div class="instructions">
+            <h3>📸 How to Add Character Photos:</h3>
+            <ol>
+                <li><strong>Find character images</strong> online (Google Images, Sanrio official sites)</li>
+                <li><strong>Save them to your computer</strong> with these exact names:</li>
+                <ul>
+                    <li><code>hello-kitty.jpg</code></li>
+                    <li><code>my-melody.jpg</code></li>
+                    <li><code>kuromi.jpg</code></li>
+                    <li><code>cinnamoroll.jpg</code></li>
+                    <li><code>pompompurin.jpg</code></li>
+                </ul>
+                <li><strong>Copy the images</strong> into the <code>images/</code> folder in your project</li>
+                <li><strong>Refresh this page</strong> to see the photos!</li>
+            </ol>
+        </div>
+        
         <div class="character-grid">
             <div class="character-card" style="border-left-color: #FF69B4">
+                <img src="images/hello-kitty.jpg" alt="Hello Kitty" class="character-image" 
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="image-placeholder" style="display: none;">
+                    Add hello-kitty.jpg<br>to images folder
+                </div>
                 <div class="character-name" style="color: #FF69B4">🌸 Hello Kitty 🌸</div>
                 <div class="character-info">
                     <strong>Real Name:</strong> Kitty White<br>
@@ -107,6 +166,11 @@
             </div>
             
             <div class="character-card" style="border-left-color: #FFB6C1">
+                <img src="images/my-melody.jpg" alt="My Melody" class="character-image" 
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="image-placeholder" style="display: none;">
+                    Add my-melody.jpg<br>to images folder
+                </div>
                 <div class="character-name" style="color: #FFB6C1">🌸 My Melody 🌸</div>
                 <div class="character-info">
                     <strong>Real Name:</strong> My Melody<br>
@@ -123,6 +187,11 @@
             </div>
             
             <div class="character-card" style="border-left-color: #9370DB">
+                <img src="images/kuromi.jpg" alt="Kuromi" class="character-image" 
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="image-placeholder" style="display: none;">
+                    Add kuromi.jpg<br>to images folder
+                </div>
                 <div class="character-name" style="color: #9370DB">🌸 Kuromi 🌸</div>
                 <div class="character-info">
                     <strong>Real Name:</strong> Kuromi<br>
@@ -139,6 +208,11 @@
             </div>
             
             <div class="character-card" style="border-left-color: #87CEEB">
+                <img src="images/cinnamoroll.jpg" alt="Cinnamoroll" class="character-image" 
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="image-placeholder" style="display: none;">
+                    Add cinnamoroll.jpg<br>to images folder
+                </div>
                 <div class="character-name" style="color: #87CEEB">🌸 Cinnamoroll 🌸</div>
                 <div class="character-info">
                     <strong>Real Name:</strong> Cinnamoroll<br>
@@ -155,6 +229,11 @@
             </div>
             
             <div class="character-card" style="border-left-color: #DAA520">
+                <img src="images/pompompurin.jpg" alt="Pompompurin" class="character-image" 
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="image-placeholder" style="display: none;">
+                    Add pompompurin.jpg<br>to images folder
+                </div>
                 <div class="character-name" style="color: #DAA520">🌸 Pompompurin 🌸</div>
                 <div class="character-info">
                     <strong>Real Name:</strong> Pompompurin<br>
