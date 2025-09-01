@@ -1,0 +1,106 @@
+# PHP Hello Kitty Website - .gitignore file
+# This file tells Git which files to ignore (not track)
+
+# ============================================================================
+# WHY WE NEED .gitignore:
+# ============================================================================
+# - Keeps sensitive information out of your repository
+# - Prevents unnecessary files from being tracked
+# - Makes your repository cleaner and more professional
+# - Protects against accidentally committing passwords or API keys
+
+# ============================================================================
+# PHP SPECIFIC FILES TO IGNORE
+# ============================================================================
+
+# Configuration files that might contain sensitive data
+config.php
+config.inc.php
+database.php
+.env
+.env.local
+.env.production
+
+# Log files
+*.log
+logs/
+error.log
+access.log
+
+# Cache files
+cache/
+tmp/
+temp/
+
+# ============================================================================
+# SYSTEM FILES TO IGNORE
+# ============================================================================
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows system files
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux system files
+*~
+
+# ============================================================================
+# DEVELOPMENT FILES TO IGNORE
+# ============================================================================
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# ============================================================================
+# UPLOADED FILES (if you add file upload functionality)
+# ============================================================================
+
+# User uploaded files (keep structure but ignore content)
+uploads/*
+!uploads/.gitkeep
+
+# ============================================================================
+# DEPENDENCIES (if you add Composer later)
+# ============================================================================
+
+# Composer dependencies
+vendor/
+
+# ============================================================================
+# SECURITY FILES (NEVER COMMIT THESE!)
+# ============================================================================
+
+# Database files
+*.sqlite
+*.db
+
+# API keys and secrets
+secrets.php
+api_keys.php
+credentials.php
+
+# ============================================================================
+# NOTES FOR BEGINNERS:
+# ============================================================================
+# 1. Always add .gitignore to your projects
+# 2. Never commit passwords, API keys, or sensitive data
+# 3. Use environment variables for configuration
+# 4. Keep your repository clean and professional
+# 5. When in doubt, add it to .gitignore rather than risk exposing sensitive data
